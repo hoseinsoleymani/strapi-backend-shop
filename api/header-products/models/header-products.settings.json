@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "header_products",
+  "info": {
+    "name": "header products"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "offProduct": {
+      "type": "decimal"
+    },
+    "categories": {
+      "type": "richtext"
+    }
+  }
+}
